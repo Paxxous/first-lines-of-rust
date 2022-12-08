@@ -2,9 +2,9 @@ use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
 
-// The main function 
-fn main() {
+fn guessing() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
+    println!("Guess a number between 1 and 100.");
     // println!("{secret_number}");
 
     loop {
@@ -28,5 +28,11 @@ fn main() {
         }
     }
 
-    // https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#comparing-the-guess-to-the-secret-number
 }
+
+// The main function 
+fn main() {
+    guessing();
+}
+
+// https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-invalid-input
