@@ -1,43 +1,15 @@
-use std::io;
-use std::cmp::Ordering;
-use rand::Rng;
+// the main function 
+fn main() {
+    let x = 5;
 
-fn guessing() {
-    let secret_number = rand::thread_rng().gen_range(1..=100);
-    println!("Guess a number between 1 and 100.");
+    let x = x + 5;
 
-    // Loop it.
-    loop {
-        // Take in input via string
-        let mut input = String::new();
-        io::stdin()
-            .read_line(&mut input)
-            .expect("Please input a valid string.");
-
-        // Convert and handle errors if anything happens
-        let input: u32 = match input.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                continue;
-            },
-        };
-
-        // Compare the input to the secret number
-        match input.cmp(&secret_number) {
-            Ordering::Less => println!("{} is too small!", input),
-            Ordering::Greater => println!("{} is too big!", input),
-            Ordering::Equal => {
-                println!("Correct!");
-                break;
-            },
-        }
+    {
+        let x = x * 2;
+        println!("X in this scope equals {x}");
     }
 
-}
-
-// The main function 
-fn main() {
-    guessing();
+    println!("X in this larger scope equals {x}");
 }
 
 // https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-invalid-input
