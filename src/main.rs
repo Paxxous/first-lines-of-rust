@@ -1,15 +1,15 @@
 // the main function 
 fn main() {
-    let x = 5;
+    // this
+    let spaces = "   ";
+    let spaces = spaces.len();
 
-    let x = x + 5;
+    // vs.
 
-    {
-        let x = x * 2;
-        println!("X in this scope equals {x}");
-    }
+    // let mut spaces = "   ";
+    // spaces = spaces.len();
 
-    println!("X in this larger scope equals {x}");
+    println!("{spaces}");
 }
 
 // https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-invalid-input
