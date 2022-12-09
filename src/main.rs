@@ -1,7 +1,22 @@
 // the main function 
 fn main() {
-    const HEXATUPLES: (i32, u32) = (0xa, 0xff);
-    println!("{}", HEXATUPLES.1);
+    // Let's mess around with arrays
+    let months = [
+        "january",
+        "febuary",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "I don't know the rest form thisi point forward",
+    ];
+
+
+    for i in months {
+        println!("{}", i);
+    }
 }
 
 // https://doc.rust-lang.org/book/ch03-02-data-types.html
