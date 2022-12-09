@@ -1,14 +1,22 @@
-// the main function 
-fn main() {
-    // This is literally pretty much just arrays in other languages lmao
-    let array = [1, 2, 3, 4,5, 6, 7, 8]; // This is a known value in the heap. so it can be easily accessed.
+use std::io;
 
-    // Loop through it, I kind of like the simplicity that these for loops bring to the table (like python!)
-    for i in array {
-        println!("{}", i);
-    }
+fn main() {
+    let a = [1, 2, 3, 6, 7, 88];
+
+    let mut index = String::new();
+    io::stdin()
+        .read_line(&mut index)
+        .expect("PLease input a valid string");
+
+    // use usize when indexing some form of collection, (such as an array)
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Please input a number");
+
+    let element = a[index];
+
+    println!("{}", element);
 }
 
 // https://doc.rust-lang.org/book/ch03-02-data-types.html
-
-// https://en.wikipedia.org/wiki/Software_bug#/media/File:First_Computer_Bug,_1945.jpg <- lmao
