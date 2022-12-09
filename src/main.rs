@@ -1,21 +1,10 @@
 // the main function 
 fn main() {
-    // Let's mess around with arrays
-    // Arrays are used when you absolutely know the amount of values and their variables
-    let months = [
-        "january",
-        "febuary",
-        "march",
-        "april",
-        "may",
-        "june",
-        "july",
-        "august",
-        "I don't know the rest form thisi point forward",
-    ];
+    // This is literally pretty much just arrays in other languages lmao
+    let array = [1, 2, 3, 4,5, 6, 7, 8]; // This is a known value in the heap. so it can be easily accessed.
 
-
-    for i in months {
+    // Loop through it, I kind of like the simplicity that these for loops bring to the table (like python!)
+    for i in array {
         println!("{}", i);
     }
 }
