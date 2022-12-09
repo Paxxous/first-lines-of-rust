@@ -1,24 +1,13 @@
 // the main function 
 fn main() {
-    for _i in 1..100 {
-        println!("One hundred :)");
-    }
+    // Tuples woah!
+    // We can declare this explicitly :D
+    let tupe = (10, 5.25, 68.01, 0xff);
+    let (_a, _b, _c, d) = tupe;
 
-    /*
-     * this is a programming language called rust.
-     * It's something that I've really gotten into
-     * Something cool.
-     * 
-     * yeah.
-     * 
-     * Rust is a cool language; that's all I needed to say.
-     * Thank you for coming here to hear me talk about rust.
-     * 
-     * thank you.
-     * very cool.
-     * 
-     * - pauxx
-     */
+    println!("{d}");
 }
 
-// https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#handling-invalid-input
+// https://doc.rust-lang.org/book/ch03-02-data-types.html
+
+// https://en.wikipedia.org/wiki/Software_bug#/media/File:First_Computer_Bug,_1945.jpg <- lmao
