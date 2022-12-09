@@ -1,6 +1,7 @@
 // the main function 
 fn main() {
     // Let's mess around with arrays
+    // Arrays are used when you absolutely know the amount of values and their variables
     let months = [
         "january",
         "febuary",
