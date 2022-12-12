@@ -10,6 +10,7 @@ fn main() {
     }
 }
 
+// I love functions
 fn number_input() -> u32 {
     let mut number = String::new();
     io::stdin()
