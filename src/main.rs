@@ -1,28 +1,14 @@
-use std::io;
-
 fn main() {
-    let number = number_input();
+    let x = 3;
 
-    if number == 15 {
-        println!("Good choice ;)");
+    // Relly? Get me to the good stuff >:(
+    if x % 3 == 0 {
+        println!("The number is divisivble by three :0");
+    } else if x % 2 == 0 {
+        println!("Your number is dibisible by two.")
     } else {
-        println!("YOUR NUMBER IS NOT FUCKING 15");
+        println!("This number is not divisible by three or two >:(.")
     }
-}
-
-// I love functions
-fn number_input() -> u32 {
-    let mut number = String::new();
-    io::stdin()
-        .read_line(&mut number)
-        .expect("Failed to read line");
-
-    let number: u32 = number
-        .trim()
-        .parse()
-        .expect("Please input a number");
-
-    number
 }
 
 // https://doc.rust-lang.org/book/ch03-05-control-flow.html
