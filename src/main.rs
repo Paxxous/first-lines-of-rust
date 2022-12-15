@@ -1,11 +1,12 @@
 fn main() {
-    let mut count = 32;
-    while count != 0 {
-        count -= 1;
-        println!("{}", count);
-    }
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
 
-    println!("There's the shitter: {}", count);
+    while index < a.len() {
+        println!("The value of index {} is {}", index, a[index]);
+
+        index += 1;
+    }
 }
 
 // https://doc.rust-lang.org/book/ch03-05-control-flow.html#loop-labels-to-disambiguate-between-multiple-loops
