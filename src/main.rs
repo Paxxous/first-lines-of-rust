@@ -1,15 +1,26 @@
-const COUNT_UNTIL: i64 = 4123489999;
 fn main() {
-    let mut counter = 0;
-    let end = loop {
-        counter += 1;
+    let mut count = 0;
+    'count_up: /* Label your loops tf tf? */ loop {
+        println!("Count: {}", count);
 
-        if counter == COUNT_UNTIL {
-            break counter;
+        let mut remaining = 0;
+        loop {
+            println!("Remaining: {}", remaining);
+            if remaining == 9 {
+                break;
+            }
+
+            if count == 2 {
+                break 'count_up;
+            }
+
+            remaining -= 1;
         }
-    };
 
-    println!("ended with result of {}", end);
+        count += 1;
+    }
+
+    println!("Count ends at {}", count);
 }
 
-// https://doc.rust-lang.org/book/ch03-05-control-flow.html#repetition-with-loops
+// https://doc.rust-lang.org/book/ch03-05-control-flow.html#loop-labels-to-disambiguate-between-multiple-loops
