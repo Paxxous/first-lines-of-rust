@@ -1,26 +1,11 @@
 fn main() {
-    let mut count = 0;
-    'count_up: /* Label your loops tf tf? */ loop {
-        println!("Count: {}", count);
-
-        let mut remaining = 0;
-        loop {
-            println!("Remaining: {}", remaining);
-            if remaining == 9 {
-                break;
-            }
-
-            if count == 2 {
-                break 'count_up;
-            }
-
-            remaining -= 1;
-        }
-
-        count += 1;
+    let mut count = 32;
+    while count != 0 {
+        count -= 1;
+        println!("{}", count);
     }
 
-    println!("Count ends at {}", count);
+    println!("There's the shitter: {}", count);
 }
 
 // https://doc.rust-lang.org/book/ch03-05-control-flow.html#loop-labels-to-disambiguate-between-multiple-loops
