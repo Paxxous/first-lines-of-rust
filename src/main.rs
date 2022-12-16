@@ -1,11 +1,23 @@
+use std::io;
+
 fn main() {
-    let a = [10, 20, 30, 40, 50];
-    let mut index = 0;
+    loop {
+        let mut str = String::new();
+        io::stdin()
+            .read_line(&mut str)
+            .expect("Failed to read line");
 
-    while index < a.len() {
-        println!("The value of index {} is {}", index, a[index]);
+        // Convert to string or some bs
+        let str: f64 = match str.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Please input a valid");
+                continue;
+            }
+        };
 
-        index += 1;
+        // Yay!
+        println!("Yay! Your number plus 23 is equal to {}.", str + 23.9999);
     }
 }
 
