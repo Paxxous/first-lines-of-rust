@@ -2,23 +2,29 @@ use std::io;
 
 fn main() {
     loop {
-        let mut str = String::new();
+        // Grab input from the console
+        let mut input = String::new();
         io::stdin()
-            .read_line(&mut str)
+            .read_line(&mut input)
             .expect("Failed to read line");
 
-        // Convert to string or some bs
-        let str: f64 = match str.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("Please input a valid");
-                continue;
-            }
+        // Translate to int and handle errors
+        let input: f64 = match input.trim().parse() {
+            Ok(num) => {
+                println!("Please input a number thank you!");
+                num
+            },
+            Err(_) => continue,
         };
 
-        // Yay!
-        println!("Yay! Your number plus 23 is equal to {}.", str + 23.9999);
+        println!("You're number plus 69.420 is {}", input + 69.420);
+
+        if input == 0.0 {
+            break;
+        }
     }
+
+    println!("Thank you for playing");
 }
 
 // https://doc.rust-lang.org/book/ch03-05-control-flow.html#loop-labels-to-disambiguate-between-multiple-loops
