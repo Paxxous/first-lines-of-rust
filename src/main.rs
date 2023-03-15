@@ -1,9 +1,17 @@
-fn main() {
-    for i in (1..=69).rev() {
-        println!("{}", i);
-    }
-
-    println!("LIFTOFF");
+struct Client {
+    connected: bool,
+    name: String,
 }
 
-// https://doc.rust-lang.org/book/ch03-05-control-flow.html#loop-labels-to-disambiguate-between-multiple-loops
+fn main() {
+    let client = Client {
+        connected: true,
+        name: String::from("poopshartbuttholegayman69420"),
+    };
+
+    println!("client online: {}, client name: {}",
+        client.connected,
+        client.name);
+}
+
+// https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
