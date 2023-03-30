@@ -5,9 +5,13 @@ struct Rectangle {
 }
 
 impl Rectangle {
-    fn area(&self) -> u32 {
-        // godamina
-        self.w * self.h
+    fn width(&self) -> bool {
+        // huuh?? oh you can add logic :D
+        self.w > 0
+    }
+
+    fn holds(&self, o: &Rectangle) -> bool {
+        self.w > o.w && self.h > o.h
     }
 }
 
@@ -17,7 +21,14 @@ fn main() {
         h: 20
     };
 
-    println!("Fucntion {:?} and {}", re, re.area());
+    let is = Rectangle {
+        w: 230498,
+        h: 8902598,
+    };
+
+    if is.holds(&re) {
+        println!("It's too FAT.")
+    }
 }
 
-// https://doc.rust-lang.org/book/ch05-02-example-structs.html
+// https://doc.rust-lang.org/book/ch05-03-method-syntax.html#wheres-the---operator

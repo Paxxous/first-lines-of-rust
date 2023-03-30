@@ -9,3 +9,6 @@ I love compiled languages, and when messing around with Rust, it's hard to say i
 I like the modern approach that's been taken with this language, and I'm excited to learn more.
 
 I've seen that Rust has a lot of potential, and I hope to do a lot with the language, I love its thorough documentation and great selection of libraries. It's the perfect mix of Python and C++ that I've needed.
+
+## dont' baba
+https://app.nearpod.com/?pin=z9hfw
