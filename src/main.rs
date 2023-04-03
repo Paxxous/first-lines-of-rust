@@ -1,26 +1,27 @@
-struct Rectangle {
-    w: u32,
-    h: u32,
+// woah enum more useful than I've expected.
+enum ipkind {
+    V4,
+    V6,
 }
 
-impl Rectangle {
-    fn holds(&self, o: &Rectangle) -> bool {
-        self.w > o.w && self.h > o.h
-    }
+struct internet {
+    ipv: ipkind,
+    address: String,
+    on: bool,
+}
 
-    // initializer for new type or something??
-    fn square(size: u32) -> Self {
-        Self {
-            w: size,
-            h: size,
-        }
-    }
+// Why I created this one 
+fn route(ip: ipkind) {
+
 }
 
 fn main() {
-    let sqr = Rectangle::square(100);
-
-    println!("w: {}, h: {}", sqr.w, sqr.h);
+    // We created it.
+    let int = internet {
+        ipv: ipkind::V4 /* the best one */,
+        address: String::from("1.0.0.1"),
+        on: true,
+   };
 }
 
-// https://doc.rust-lang.org/book/ch05-03-method-syntax.html#wheres-the---operator
+// https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html
