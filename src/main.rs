@@ -5,6 +5,7 @@ enum ipkind {
 }
 
 struct internet {
+    // so it has to be used in function then.
     ipv: ipkind,
     address: String,
     on: bool,
